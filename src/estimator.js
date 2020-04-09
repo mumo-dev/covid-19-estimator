@@ -15,9 +15,8 @@ const calculateCovid19Impact = (data) => {
     currentlyInfected,
     requestedTimeInDays
   );
-  const severeCasesByRequestedTime = Math.trunc(
-    0.15 * infectionsByRequestedTime
-  );
+  const severeCasesByRequestedTime = 0.15 * infectionsByRequestedTime;
+
   const hospitalBedsByRequestedTime = getHospitalBedsByRequestedTime(
     data.totalHospitalBeds,
     severeCasesByRequestedTime
@@ -39,7 +38,7 @@ const calculateCovid19Impact = (data) => {
   return {
     currentlyInfected,
     infectionsByRequestedTime,
-    severeCasesByRequestedTime,
+    severeCasesByRequestedTime: Math.trunc(severeCasesByRequestedTime),
     hospitalBedsByRequestedTime,
     casesForICUByRequestedTime,
     casesForVentilatorsByRequestedTime,
@@ -60,9 +59,7 @@ const calculateCovid19ImpactSevereImpact = (data) => {
     requestedTimeInDays
   );
 
-  const severeCasesByRequestedTime = Math.trunc(
-    0.15 * infectionsByRequestedTime
-  );
+  const severeCasesByRequestedTime = 0.15 * infectionsByRequestedTime;
 
   const hospitalBedsByRequestedTime = getHospitalBedsByRequestedTime(
     data.totalHospitalBeds,
@@ -85,7 +82,7 @@ const calculateCovid19ImpactSevereImpact = (data) => {
   return {
     currentlyInfected,
     infectionsByRequestedTime,
-    severeCasesByRequestedTime,
+    severeCasesByRequestedTime: Math.trunc(severeCasesByRequestedTime),
     hospitalBedsByRequestedTime,
     casesForICUByRequestedTime,
     casesForVentilatorsByRequestedTime,
