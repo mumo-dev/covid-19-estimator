@@ -42,7 +42,7 @@ const getDollarsInFlight = (
   population,
   income,
   days
-) => (infectionsByRequestedTime * population * income * days) / 10;
+) => (infectionsByRequestedTime * population * income * days) / 100;
 
 export {
   getDollarsInFlight,
