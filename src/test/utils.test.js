@@ -1,8 +1,6 @@
 import {
   getRequestedTimeInDays,
-  getInfectionsByRequestedTime,
-  getHospitalBedsByRequestedTime,
-  getDollarsInFlight
+  getInfectionsByRequestedTime
 } from '../utils';
 
 test('tests if number of days in request data', () => {
