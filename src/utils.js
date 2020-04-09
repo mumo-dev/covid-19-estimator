@@ -42,7 +42,11 @@ const getDollarsInFlight = (
   population,
   income,
   days
-) => (infectionsByRequestedTime * population * income * days) / 1000000;
+) => {
+  const result = (infectionsByRequestedTime * population * income * days)
+    / 1000000000000000000000000000000000000000000000000000;
+  return result;
+};
 
 export {
   getDollarsInFlight,
@@ -50,3 +54,5 @@ export {
   getInfectionsByRequestedTime,
   getRequestedTimeInDays
 };
+
+// console.log(getDollarsInFlight(2, 3, 2, 2));
