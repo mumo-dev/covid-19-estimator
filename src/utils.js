@@ -33,8 +33,8 @@ const getHospitalBedsByRequestedTime = (
   totalHospitalBeds,
   severeCasesByRequestedTime
 ) => {
-  const availableBeds = Math.trunc(0.35 * totalHospitalBeds);
-  return availableBeds - severeCasesByRequestedTime;
+  const availableBeds = 0.35 * totalHospitalBeds;
+  return Math.trunc(availableBeds - severeCasesByRequestedTime);
 };
 
 const getDollarsInFlight = (
