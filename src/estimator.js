@@ -116,5 +116,5 @@ export default covid19ImpactEstimator;
 //   totalHospitalBeds: 1000
 // };
 
-// eslint-disable-next-line no-console
+// // eslint-disable-next-line no-console
 // console.log(covid19ImpactEstimator(data));

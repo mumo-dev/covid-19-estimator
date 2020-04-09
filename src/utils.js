@@ -42,7 +42,7 @@ const getDollarsInFlight = (
   population,
   income,
   days
-) => parseFloat((infectionsByRequestedTime * population * income * days).toFixed(2));
+) => infectionsByRequestedTime * population * income * days;
 
 export {
   getDollarsInFlight,
