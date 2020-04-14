@@ -50,5 +50,3 @@ export {
   getInfectionsByRequestedTime,
   getRequestedTimeInDays
 };
-
-// console.log(getDollarsInFlight(2, 3, 2, 2));
